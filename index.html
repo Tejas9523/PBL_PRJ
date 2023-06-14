@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        color: rgb(103, 9, 9);
+        padding: 30px;
+    }
+
+    .clg {
+        font-size: 17px;
+
+    }
+
+    .dep {
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .pbl {
+        color: #680f3b;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        padding-left: 50px;
+        border-style: solid;
+        border-color: #ab0256;
+        height: 580px;
+    }
+
+    .d {
+        margin-left: 50px;
+        padding: 50px;
+        padding-bottom: 220px;
+        border-width: 2px;
+        border-color: black;
+        float: left;
+    }
+
+    .prjnm {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 17px;
+        box-shadow: 0px 0px 30px 10px black;
+        background-color: #ff007e;
+        margin: 50px;
+        margin-top: 150px;
+        padding: 30px;
+        padding-bottom: 40px;
+        width: 90%;
+        border-radius: 30px;
+        color: aliceblue;
+        position: relative;
+        float: left;
+        text-align: left;
+    }
+
+    .start {
+        background-color: white;
+        box-shadow: 0px 0px 10px 2px black;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 22px;
+        border: none;
+        width: fit-content;
+        position: absolute;
+        left: 670px;
+        top: 370px;
+        color: black;
+    }
+    .stop {
+        background-color: white;
+        box-shadow: 0px 0px 10px 2px black;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 22px;
+        border: none;
+        width: fit-content;
+        position: absolute;
+        left: 870px;
+        top: 370px;
+        color: black;
+    }
+
+    hr {
+        background-color: black;
+        width: 5;
+        height: 1px;
+        background-color: black;
+    }
+
+    .pic {
+        padding: 20px;
+        float: left;
+        width: fit-content;
+        margin: 30px;
+        /* background-color:#ff4ba5a2; */
+        /* box-shadow: 5px 5px 10px 5px black; */
+        border-radius: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+    }
+
+    .pic img {
+        border: solid;
+        border-color: #ff007e;
+        box-shadow: 0px 0px 1px 1px black;
+        /* border-radius: 20px; */
+        margin: 10px;
+    }
+</style>
+<script>
+    function executeCommand() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://localhost:3000/runcmd', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+    }
+   
+    function f1() {
+        var image = document.getElementById("1");
+        image.style.width = "100%";
+        image.style.height = "100%";
+    }
+    function f2() {
+        var image = document.getElementById("2");
+        image.style.width = "100%";
+        image.style.height = "100%";
+    }
+    function f3() {
+        var image = document.getElementById("3");
+        image.style.width = "100%";
+        image.style.height = "100%";
+    }
+    function f4() {
+        var image = document.getElementById("4");
+        image.style.width = "100%";
+        image.style.height = "100%";
+    }
+    function f5() {
+        var image = document.getElementById("5");
+        image.style.width = "100%";
+        image.style.height = "100%";
+    }
+</script>
+
+<body>
+    <center>
+        <img src="DPU-Logo.png" height="20px" alt=""><br>
+        <header class="clg"><b>Dr DY Patil Institute of Technology, Pimpri</b></header>
+        <header class="dep">Artificial Intelligence & Data Science Department</header><br>
+        <!-- <hr> -->
+        <div class="pbl">
+            <img src="vector.gif" alt="" height="450px" style="float: left;margin-top: 70px;margin-left: 30px;">
+            <br>
+            <div class="d">
+                <div
+                    style="font-size: 50px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    Project Based Learning </div><br>
+                Guidance - Prof Shubhangi Vairagar Mam <br>
+                <hr><br>
+                <img src="Capture.PNG" height="300px" style="border-radius: 20px;" alt="">
+            </div>
+        </div><br>
+        <div style="padding: 40px;">
+            <h1>Tutorial</h1>
+            <hr style="float: left;">
+            <hr>
+            <div class="pic">
+                <img src="1.png" alt="" height="200px" id='1' onclick="f1()"><br><br>
+                Cursor, Left Click, Right <br> Click, Double Click
+            </div>
+            <div class="pic">
+                <img src="2.png" alt="" height="200px" id="2" onclick="f2()"><br><br>
+                Scrolling Up
+            </div>
+            <div class="pic">
+                <img src="3.png" alt="" height="200px" id="3" onclick="f3()"><br><br>
+                Scrolling Down
+            </div>
+            <div class="pic">
+                <img src="4.png" alt="" height="200px" id="4" onclick="f4()"><br><br>
+                Screen Brightness Control
+            </div>
+            <div class="pic">
+                <img src="5.png" alt="" height="200px" id="5" onclick="f5()"><br><br>
+                System Volume Control
+            </div>
+        </div>
+
+        <div class="prjnm">
+            <img src="HAND.gif" height="400x" style="float: left;margin-right: 80px;margin-left: 40px;"><br>
+            <h1>Virtual Mouse using Hand Gestures</h1> <br>
+            <p> A virtual mouse is a computer input device that allows users to control a cursor on a
+                display screen without the use of a physical mouse. Virtual mice can be controlled by
+                a variety of input methods, such as hand gestures, head movements, or voice
+                commands.</p>
+            <p>This project will develop a virtual mouse that is controlled by hand gestures. The
+                virtual mouse will be implemented using a webcam and a computer vision algorithm.
+                The computer vision algorithm will track the user's hand movements and translate
+                them into mouse movements</p>
+
+
+            <button type="button" class="start" onclick="executeCommand()">
+                <img src="play.png" style="float: left;position: relative;top: 0px;" height="30px"
+                    alt=""><b>&nbspRun</b></button>
+
+            <img src="mouse.gif" height="90px" style="position: absolute;bottom: 20px;left: 1190px;" alt="">
+        </div>
+    </center>
+</body>
+
+</html>
